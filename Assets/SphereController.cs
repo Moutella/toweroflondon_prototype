@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SphereController : MonoBehaviour
 {
+    public int ballNumber;
     public bool onPole;
     public bool isHolding;
     private Rigidbody rb;
@@ -26,7 +27,7 @@ public class SphereController : MonoBehaviour
     {
         if (isHolding) { 
             var screenPoint = Input.mousePosition;
-            screenPoint.z = 32f; //distance of the plane from the camera
+            screenPoint.z = 33.5f; //distance of the plane from the camera
             gameObject.transform.position = Camera.main.ScreenToWorldPoint(screenPoint);
         }
 
